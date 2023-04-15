@@ -1,0 +1,19 @@
+
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/nav.ejs') %>
+<div class="wrapper">
+    <div class="item1"></div>
+    <div class="item2">
+        <form action="/updateData" method="post">
+            <input type="text" name="id" value="<%= test[0].id %>" disabled>
+            <input type="text" placeholder="name" name="name" value="<%= test[0].UserName %>">
+            <input type="text" placeholder="email"  name="email" value="<%= test[0].Email %>">
+            <input type="submit" placeholder="Update">
+        </form>
+    </div>
+    <div class="item3"></div>
+</div>
+
+
+<%- include('partials/footer.ejs') %>

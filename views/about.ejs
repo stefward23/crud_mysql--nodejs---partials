@@ -1,0 +1,35 @@
+
+
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/nav.ejs') %>
+
+<div class="wrapper">
+    <div class="item1"></div>
+    <div class="item2"> <h1>About Page</h1></div>
+    <div class="item3"></div>
+    <div class="item4"></div>
+    <div class="item5"><table>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        <%if (test.length > 0) { %>
+            <% for (let i=0; i<test.length; i++) { %>
+                <tr>
+                    <td><%- test[i].id %></td>
+                    <td><%- test[i].UserName %></td>
+                    <td><%- test[i].Email %></td>
+                </tr>
+           <% } %>
+       <% } else { %>
+        <h1>Data Not Found</h1>
+      <% } %>
+    </table></div>
+    <div class="item6"></div>
+
+    
+</div>
+
+<%- include('partials/footer.ejs') %>
